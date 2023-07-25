@@ -1,0 +1,208 @@
+/* css reset da pagina*/
+
+body, h1,h2,ul,li,p,dd,dt,dl{
+  margin:0;
+  padding:0;
+}
+
+img{
+  display:block;
+  max-width: 100%;
+}
+
+ul{
+  list-style:none;
+}
+
+/* Definindo altura da pagina e suas propriedades do corpo funcionando tambem para modelo responsivo*/
+
+body { 
+  min-height: 100vh;
+  background-color: #222 !important;
+  color: #fff;
+}
+
+/* Definindo o tamanho da fonte e o tamanho da pagina*/
+/*usamos o (em) que e uma unidade de medida relativa ao tamanho da fonte do elemento pai*/
+h1{
+  font-size: 2em;
+  padding-bottom: 1em;
+  font-family: 'Barlow', sans-serif;
+}
+h2{
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  font-family: 'Barlow', sans-serif;
+}
+h3{
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  font-family: 'Barlow', sans-serif;
+}
+p{
+  font-size: 1em;
+  font-family: 'Barlow', sans-serif;
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+.cabecalho{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  padding: 1.5em;
+}
+
+.cabecalho img{
+  width: 200px;
+  height: 200px;
+}
+
+.menu{
+  display: flex;  
+}
+
+.lista-menu{
+  display: flex;
+  align-items: center;
+}
+
+.lista-menu li{
+  font-size: 1.3em;
+  padding: 0.5em;
+}
+
+.lista-menu li a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Barlow', sans-serif;
+}
+
+.lista-menu li a:hover{
+  color: #38B6FF !important;
+}
+
+#menu-icon{
+  display: none !important;
+  color: #fff;
+}
+
+.bloco{
+  padding-top: 80px;
+	padding-bottom: 80px;
+
+	position: relative;
+	width: 100%;
+}
+
+.cor1{
+  background-color: #333;
+}
+
+
+
+.img-carro{
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.titulo{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #38B6FF;
+  padding-top: 1em;
+}
+
+.descricao{
+  font-weight: 300;
+  padding-bottom: 1em;
+  color: #fff;
+}
+
+.card-veiculos{
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+a .card-veiculos{
+  text-decoration: none;
+  color: #fff;
+} 
+
+.card-veiculos img{
+  width: 50%;
+  border-radius: 100px;
+  margin-bottom: 1em;
+  
+}
+
+.card-veiculos:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+footer{
+  background-color: #000;
+}
+
+.logo-footer{
+  width: 200px;
+  height: 200px;
+}
+
+.encerramento{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Modelo responsivo*/
+@media (max-width: 900px){
+
+  .cabecalho{
+    flex-direction: column;
+  }
+  .menu{
+    flex-direction: column;
+    align-items: center;
+  }
+  .lista-menu{
+    flex-direction: column;
+    display: none;
+  }
+  .lista-menu li{
+    padding: 0.5em;
+  }
+  #menu-icon{
+    display: block !important;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .mostrar{
+    display: block !important;
+    text-align: center;
+    padding: 0;
+  }
+
+  #menu-icon:hover{
+    color: #38B6FF !important;
+  }
+}
